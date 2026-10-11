@@ -1,16 +1,17 @@
 # Scroll-Driven Hero Section Animation
 
-[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen?style=for-the-badge&logo=github)](https://gpranit16.github.io/assignemnt/)
+[![Live Demo (Vercel)](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://assignemnt-eight.vercel.app/)
 [![Repository](https://img.shields.io/badge/Repository-GitHub-blue?style=for-the-badge&logo=github)](https://github.com/gpranit16/assignemnt)
 [![GSAP 3.12](https://img.shields.io/badge/Animation-GSAP%20ScrollTrigger-88CE02?style=for-the-badge&logo=greensock)](https://greensock.com/)
 
-An ultra-smooth, high-performance scroll-driven hero section animation inspired by automotive motion UI, featuring an interactive supercar track, letter-collision illumination for **W E L C O M E &nbsp; I T Z &nbsp; F I Z Z**, real-time telemetry HUD, and synchronized impact metric cards.
+An ultra-smooth, high-performance scroll-driven hero section animation inspired by automotive motion UI, featuring an interactive supercar track, dynamic letter-collision illumination for **W E L C O M E &nbsp; I T Z &nbsp; F I Z Z**, real-time telemetry HUD, and synchronized impact metric cards.
 
 ---
 
 ## 🔗 Submission Links
 
-- **Live Webpage:** [https://gpranit16.github.io/assignemnt/](https://gpranit16.github.io/assignemnt/)
+- **Live Webpage (Vercel):** [https://assignemnt-eight.vercel.app/](https://assignemnt-eight.vercel.app/)
+- **Live Webpage (GitHub Pages Mirror):** [https://gpranit16.github.io/assignemnt/](https://gpranit16.github.io/assignemnt/)
 - **GitHub Repository:** [https://github.com/gpranit16/assignemnt](https://github.com/gpranit16/assignemnt)
 - **Reference Inspiration:** [Scroll Car Animation Demo](https://paraschaturvedi.github.io/car-scroll-animation)
 
@@ -66,7 +67,7 @@ An ultra-smooth, high-performance scroll-driven hero section animation inspired 
 ├── style.css        # Responsive styling, typography, animations, dark theme
 ├── main.js          # GSAP ScrollTrigger engine, letter collision, metrics scrub
 ├── car.svg          # Ultra-detailed vector top-view supercar asset
-└── README.md        # Documentation, live demo link & assignment compliance
+└── README.md        # Documentation, live demo links & assignment compliance
 ```
 
 ---
@@ -88,12 +89,3 @@ An ultra-smooth, high-performance scroll-driven hero section animation inspired 
    ```
 
 3. Visit `http://localhost:3000` to interact with the scroll animation.
-
----
-
-## 🌐 Deploy to GitHub Pages
-
-1. In the repository settings on GitHub (`Settings` -> `Pages`).
-2. Under **Build and deployment** > **Branch**, select `main` branch and `/ (root)`.
-3. Click **Save**. The live webpage will be immediately deployed at:
-   `https://gpranit16.github.io/assignemnt/`
