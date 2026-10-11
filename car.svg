@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" width="520" height="220" fill="none">
+  <defs>
+    <!-- Car Body Gradients -->
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0a0c"/>
+      <stop offset="15%" stop-color="#1f232b"/>
+      <stop offset="45%" stop-color="#00f2fe"/>
+      <stop offset="60%" stop-color="#4facfe"/>
+      <stop offset="85%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#0ff0b3"/>
+    </linearGradient>
+
+    <!-- Metallic Orange/Electric Accent -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff0844"/>
+      <stop offset="50%" stop-color="#ffb199"/>
+      <stop offset="100%" stop-color="#ff4e50"/>
+    </linearGradient>
+
+    <!-- Windshield / Glass Gradient -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="40%" stop-color="#1e293b"/>
+      <stop offset="80%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Headlight Beam Glow -->
+    <radialGradient id="lightBeam" cx="0%" cy="50%" r="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Tail Light Glow -->
+    <radialGradient id="tailGlow" cx="100%" cy="50%" r="100%">
+      <stop offset="0%" stop-color="#ff1744" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#ff1744" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff1744" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="carShadow" x="-10%" y="-20%" width="125%" height="150%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.7 0"/>
+      <feOffset dx="4" dy="12"/>
+      <feBlend in="SourceGraphic" in2="blur" mode="normal"/>
+    </filter>
+
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ambient Under-Car Shadow -->
+  <ellipse cx="260" cy="115" rx="230" ry="60" fill="#000000" opacity="0.6" filter="url(#carShadow)"/>
+
+  <!-- Headlight Projected Cones (Right Side - Direction of Motion) -->
+  <polygon points="510,75 580,30 580,120" fill="url(#lightBeam)" opacity="0.7"/>
+  <polygon points="510,145 580,100 580,190" fill="url(#lightBeam)" opacity="0.7"/>
+
+  <!-- Main Chassis / Outer Silhouette -->
+  <g filter="url(#carShadow)">
+    <!-- Base Body Shell -->
+    <path d="M 60,110 
+             C 65,80 85,62 130,55 
+             C 190,46 270,52 350,56 
+             C 410,59 470,72 505,95 
+             C 515,102 518,118 505,125 
+             C 470,148 410,161 350,164 
+             C 270,168 190,174 130,165 
+             C 85,158 65,140 60,110 Z" 
+          fill="#111827" stroke="#374151" stroke-width="2"/>
+
+    <!-- Aerodynamic Side Pods & Fenders -->
+    <path d="M 120,58 C 170,54 220,56 260,62 C 300,68 340,65 380,60 C 440,68 480,85 498,100 L 498,120 C 480,135 440,152 380,160 C 340,155 300,152 260,158 C 220,164 170,166 120,162 Z" 
+          fill="url(#bodyGrad)" opacity="0.95"/>
+
+    <!-- Carbon Fiber Diffuser / Rear Wing Structure -->
+    <path d="M 50,85 L 85,88 L 85,132 L 50,135 C 44,125 44,95 50,85 Z" fill="#090d16" stroke="#1f2937" stroke-width="1.5"/>
+    <rect x="42" y="75" width="12" height="70" rx="3" fill="#030712" stroke="#475569" stroke-width="1"/>
+
+    <!-- Exhaust Outlets -->
+    <circle cx="58" cy="100" r="4" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+    <circle cx="58" cy="120" r="4" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+
+    <!-- Rear Tail Lights (Twin Red Neon Strips) -->
+    <path d="M 68,82 Q 78,85 88,86" stroke="#ef4444" stroke-width="4" stroke-linecap="round" filter="url(#neonGlow)"/>
+    <path d="M 68,138 Q 78,135 88,134" stroke="#ef4444" stroke-width="4" stroke-linecap="round" filter="url(#neonGlow)"/>
+
+    <!-- Front Splitter / Nose Aero -->
+    <path d="M 480,82 C 500,92 516,102 516,110 C 516,118 500,128 480,138 L 490,125 C 496,118 496,102 490,95 Z" fill="#0f172a"/>
+    <path d="M 500,96 C 512,104 515,110 515,110 C 515,110 512,116 500,124" stroke="#00f2fe" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Front LED Matrix Headlights -->
+    <path d="M 470,72 L 498,88 L 476,92 Z" fill="#e0f2fe" filter="url(#neonGlow)"/>
+    <path d="M 470,148 L 498,132 L 476,128 Z" fill="#e0f2fe" filter="url(#neonGlow)"/>
+
+    <!-- Cockpit & Glass Canopy (Top View Teardrop) -->
+    <path d="M 210,80 C 270,78 350,83 385,100 C 392,105 392,115 385,120 C 350,137 270,142 210,140 C 175,138 165,125 165,110 C 165,95 175,82 210,80 Z" 
+          fill="url(#glassGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+
+    <!-- Roof Scoop & Engine Cover Slats -->
+    <path d="M 185,96 L 240,96 C 248,96 254,102 254,110 C 254,118 248,124 240,124 L 185,124 Z" fill="#0b0f19" stroke="#1e293b"/>
+    <line x1="200" y1="102" x2="235" y2="102" stroke="#475569" stroke-width="1.5"/>
+    <line x1="195" y1="110" x2="242" y2="110" stroke="#00f2fe" stroke-width="1.5"/>
+    <line x1="200" y1="118" x2="235" y2="118" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- Driver & Passenger Bucket Seats Silhouette through tinted glass -->
+    <rect x="270" y="88" width="36" height="18" rx="6" fill="#020617" opacity="0.75"/>
+    <rect x="270" y="114" width="36" height="18" rx="6" fill="#020617" opacity="0.75"/>
+    <circle cx="316" cy="97" r="5" fill="#1e293b"/>
+    <circle cx="316" cy="123" r="5" fill="#1e293b"/>
+
+    <!-- Steering Wheel Indicator -->
+    <path d="M 335,93 C 340,93 342,97 342,101" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Hood Vents / Aerodynamic Ducts -->
+    <path d="M 405,94 C 430,94 445,98 455,98" stroke="#020617" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 405,126 C 430,126 445,122 455,122" stroke="#020617" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Side Mirrors -->
+    <path d="M 345,60 C 352,52 360,50 365,52 C 367,54 365,60 358,63 Z" fill="#0f172a" stroke="#00f2fe" stroke-width="1"/>
+    <path d="M 345,160 C 352,168 360,170 365,168 C 367,166 365,160 358,157 Z" fill="#0f172a" stroke="#00f2fe" stroke-width="1"/>
+
+    <!-- Wheels / High-Performance Pirelli P-Zero Top View Outlines -->
+    <rect x="120" y="46" width="55" height="15" rx="3" fill="#090d16" stroke="#334155" stroke-width="1"/>
+    <rect x="120" y="159" width="55" height="15" rx="3" fill="#090d16" stroke="#334155" stroke-width="1"/>
+    <rect x="400" y="49" width="52" height="14" rx="3" fill="#090d16" stroke="#334155" stroke-width="1"/>
+    <rect x="400" y="157" width="52" height="14" rx="3" fill="#090d16" stroke="#334155" stroke-width="1"/>
+
+    <!-- Wheel Rim Calipers Glowing -->
+    <rect x="135" y="48" width="16" height="4" rx="1" fill="#00f2fe"/>
+    <rect x="135" y="168" width="16" height="4" rx="1" fill="#00f2fe"/>
+    <rect x="412" y="51" width="16" height="4" rx="1" fill="#00f2fe"/>
+    <rect x="412" y="165" width="16" height="4" rx="1" fill="#00f2fe"/>
+
+    <!-- Center Racing Accent Stripe -->
+    <path d="M 90,110 L 165,110 M 385,110 L 485,110" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>
